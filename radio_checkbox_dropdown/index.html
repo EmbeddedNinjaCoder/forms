@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Radio, Checkbox, and Dropdown</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <form>
+         <!-- Radio Buttons must share the same name -->
+
+         <fieldset>
+            <legend>Radio Buttons</legend>
+            <p>Choose your favorite programming language:</p>
+
+            <input type="radio" name="language" id="javascript" value="javascript" checked />
+            <label for="javascript">JavaScript</label>
+            <input type="radio" name="language" id="python" value="python" />
+            <label for="python">Python</label>
+            <input type="radio" name="language" id="ruby" value="ruby" />
+            <label for="ruby">Ruby</label>
+         </fieldset>
+
+         <fieldset>
+            <legend>Checkboxes:</legend>
+            <p>What type of computers do you own?</p>
+
+            <input type="checkbox" name="mac" id="mac" value="mac" />
+            <label for="mac"></label>Mac</label>
+            &nbsp;
+            <input type="checkbox" name="pc" id="pc" value="pc" />
+            <label for="pc">PC</label>
+         </fieldset>
+
+         <fieldset>
+            <legend>Dropdown:</legend>
+            <p>What's your favorite cuisine?</p>
+
+            <select id="cuisine">
+               <option value="">Select a cuisine</option>
+               <option value="chinese">Chinese</option>
+               <option value="french">French</option>
+               <option value="indian">Indian</option>
+               <option value="italian">Italian</option>
+               <option value="japanese">Japanese</option>
+               <option value="korean">Korean</option>
+               <option value="mexican">Mexican</option>
+               <option value="spanish">Spanish</option>
+               <option value="thai">Thai</option>
+             </select> 
+         </fieldset>
+         <button type="submit">Submit</button>
+      </form>
+
+      <script src="./index.js"></script>
+   </body>
+</html>

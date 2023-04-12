@@ -1,0 +1,32 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 75%;
+  
+}
+
+input[type="image"] {
+    height: 50px;
+    width: 50px;
+}
+
+#user-info {
+    margin-top: 25px;
+}
+
+
+/* input[type="file"] {
+    width: 75%;
+} */
