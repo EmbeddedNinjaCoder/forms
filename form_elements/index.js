@@ -1,7 +1,7 @@
 const form = document.querySelector("form") // using the <form> tag
 
 form.addEventListener("submit", (e) => {
-   e.preventDefault()
+   // e.preventDefault()
    console.log(e)
 
    // Different ways to access input values
