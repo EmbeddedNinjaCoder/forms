@@ -40,23 +40,18 @@ form.addEventListener("submit", (e) => {
 function displayUserData(user) {
    const userInfoDiv = document.getElementById("user-info")
 
-   const dataDiv = document.createElement("div")
+   const firstNameDiv = document.createElement("div")
+   firstNameDiv.textContent = `First Name: ${user.firstName}`
 
-   const firstNameP = document.createElement("div")
-   firstNameP.textContent = `First Name: ${user.firstName}`
+   const lastNameDiv = document.createElement("div")
+   lastNameDiv.textContent = `Last Name: ${user.lastName}`
 
-   const lastNameP = document.createElement("div")
-   lastNameP.textContent = `Last Name: ${user.lastName}`
+   const emailDiv = document.createElement("div")
+   emailDiv.textContent = `Email: ${user.email}`
 
-   const emailP = document.createElement("div")
-
-   emailP.textContent = `Email: ${user.email}`
-
-   const dateP = document.createElement("div")
-   dateP.textContent = `Date: ${user.date}`
-
-   dataDiv.append(firstNameP, lastNameP, emailP, dateP)
+   const dateDiv = document.createElement("div")
+   dateDiv.textContent = `Date: ${user.date}`
 
    const br = document.createElement("br")
-   userInfoDiv.append(dataDiv, br)
+   userInfoDiv.append(firstNameDiv, lastNameDiv, emailDiv, dateDiv, br)
 }

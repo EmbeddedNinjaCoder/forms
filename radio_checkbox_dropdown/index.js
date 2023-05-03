@@ -6,7 +6,8 @@ const cuisineSelect = document.getElementById("cuisine")
 
 form.addEventListener("submit", (e) => {
    e.preventDefault()
-
+   // console.log(e)
+   
    const aboutMe = {
       language: "",
       Mac: false,
@@ -27,6 +28,8 @@ form.addEventListener("submit", (e) => {
 
    // Get the select box info
    aboutMe["cuisine"] = cuisineSelect.value
+
+   // form.reset()
 
    console.log(aboutMe)
 })
