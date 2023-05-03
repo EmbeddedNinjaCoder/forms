@@ -1,7 +1,7 @@
 const form = document.querySelector("form") // using the <form> tag
 
 form.addEventListener("submit", (e) => {
-   // e.preventDefault()
+   e.preventDefault()
    console.log(e)
 
    // Different ways to access input values
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
    const date = e.target.date.value
    console.log(date)
 
-   // If name and id are hypenated
+   // If name and id are hypenated - access it with bracket notation, like an object property...which it is!
    let firstNameUsingNameOrIDAttribute = e.target["first-name"].value
    console.log(firstNameUsingNameOrIDAttribute)
 
@@ -34,37 +34,29 @@ form.addEventListener("submit", (e) => {
       email,
       date,
    }
-   displayUserData1(user)
-//    displayUserData2(user)
+   displayUserData(user)
 })
 
-function displayUserData1(user) {
-    // get the hard-coded elements from the DOM
-
-    const firstNameElement = document.getElementById('first');
-    const lastNameElement = document.getElementById('last');
-    const emailElement = document.getElementById('email-info');
-    const dateElement = document.getElementById('date-info');
-
-    // use the user object to populate them
-
-    firstNameElement.textContent = user.firstName;
-    lastNameElement.textContent = user.lastName;
-    emailElement.textContent = user.email;
-    dateElement.textContent = user.date;
-}
-
-function displayUserData2(user) {
+function displayUserData(user) {
    const userInfoDiv = document.getElementById("user-info")
-   const div = document.createElement("div")
-   div.innerHTML =  `<label for="first">First Name:</label>
-        <span id="first">${user.firstName}</span><br />
-        <label for="last">Last Name:</label>
-        <span id="last">${user.lastName}</span><br />
-        <label for="email-info">Email:</label>
-        <span id="email-info">${user.email}</span><br />
-        <label for="date-info">Date:</label>
-        <span id="date-info">${user.date}</span><br /><br />`
-   userInfoDiv.append(div)
 
+   const dataDiv = document.createElement("div")
+
+   const firstNameP = document.createElement("div")
+   firstNameP.textContent = `First Name: ${user.firstName}`
+
+   const lastNameP = document.createElement("div")
+   lastNameP.textContent = `Last Name: ${user.lastName}`
+
+   const emailP = document.createElement("div")
+
+   emailP.textContent = `Email: ${user.email}`
+
+   const dateP = document.createElement("div")
+   dateP.textContent = `Date: ${user.date}`
+
+   dataDiv.append(firstNameP, lastNameP, emailP, dateP)
+
+   const br = document.createElement("br")
+   userInfoDiv.append(dataDiv, br)
 }
